@@ -32,17 +32,26 @@ body {
 .cv-wrapper {
   max-width: 1200px;
   margin: auto;
-  background: #615e5eff;
+  background: #fff;
   box-shadow: 40px 0 10px rgba(0,0,0,0.1);
   margin-top: 90px;
 }
-
+.contact-icons a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  background-color: #021427;
+  border: #d8d5d5;
+  padding: 2px;
+  border-radius: 5%;
+  transition: background-color 0.3s, color 0.3s;
+}
 .cv-header {
 
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
-  background-color: #2c3e50;
+  background-color: #021427;
   color: white;
   margin-top: 70px;
 }
@@ -68,9 +77,11 @@ body {
 .cv-sidebar {
   flex: 1 1 300px;
   padding: 10px;
-  /* même fond que le header */
-  background-color: #2c3e50;
-  color: #ffffff;
+  background-color: #ecf0f1;
+  background-color: #dbdbe0; /* turquoise contrastant */
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: #192027;
 }
 
 
@@ -84,40 +95,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* Styles spécifiques au sidebar pour rendre le texte blanc
-   et donner un fond distinct aux liens / labels */
-.cv-sidebar h3 {
-  background: transparent; /* header et sidebar partagent la même couleur */
-  color: #ffffff;
-  text-align: left;
-  padding: 0 0 8px 0;
-}
-
-.cv-sidebar a {
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 8px;
-  /* fond des "écritures" (labels / liens) — couleur distincte */
-  background-color: #040549; /* turquoise contrastant */
-  padding: 6px 8px;
-  border-radius: 6px;
-}
-
-.cv-sidebar .skill label {
-  font-weight: bold;
-  display: inline-block;
-  margin-bottom: 5px;
-  color: #ffffff;
-  background-color: #2980b9; /* bleu pour les labels de compétence */
-  padding: 4px 6px;
-  border-radius: 4px;
-}
-
-.cv-sidebar .contact-icons li a {
-  display: inline-block;
-}
-
 .cv-sidebar ul, .cv-main ul {
   list-style: none;
   padding-left: 0;
@@ -126,6 +103,7 @@ body {
 .cv-sidebar li, .cv-main li {
   margin-bottom: 5px;
 }
+
 .cv-footer {
   text-align: center;
   padding: 10px;
@@ -135,31 +113,40 @@ body {
 h3{
     color: #f2f2f5;
     font-weight: bold;
-    background-color: #2c3e50;
+    background-color: #021427;
     text-align: center;
 }
 .skills {
   max-width: 600px;
   margin: 30px auto;
   padding: 0 20px;
+
 }
+
 .skill {
   margin-bottom: 20px;
 }
+
 .skill label {
   font-weight: bold;
-  display: block;
+  display: inline-block;
   margin-bottom: 5px;
-  color: #2c3e50;
+  color: #dee1e4;
+  background-color: #1c252e;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.95em;
 }
+
 .progress-bar {
   background-color: #a8dbe4;
   border-radius: 20px;
   overflow: hidden;
   height: 25px;
 }
+
 .progress {
-  background-color: #0c6fb1;
+  background-color: #021427;
   height: 100%;
   color: rgb(238, 239, 240);
   text-align: right;
@@ -168,7 +155,11 @@ h3{
   font-size: 0.9em;
   border-radius: 20px 0 0 20px;
   transition: width 1s ease-in-out;
+
 }
+
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   .cv-header {
     flex-direction: column;
@@ -182,7 +173,6 @@ h3{
 
   .cv-content {
     flex-direction: column;
-    background-color: rgb(218, 223, 223);
   }
 
   .cv-sidebar, .cv-main {
@@ -203,7 +193,7 @@ footer {
 }
 
 .btn-download {
-  background-color: #021a35;
+  background-color: #021427;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
